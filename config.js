@@ -6,14 +6,14 @@
 module.exports = {
     production: {
       github: {
-        url: 'git@github.com:Yangqi0604/spm.web.git',
+        url: 'https://github.com/Yangqi0604/spm.web.git',
         branch: 'build-production'
       }
     },
   
     test: {
       github: {
-        url: 'git@github.com:Yangqi0604/spm.web.git',
+        url: 'https://github.com/Yangqi0604/spm.web.git',
         branch: 'build-test'
       }
     }
