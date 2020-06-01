@@ -1,8 +1,6 @@
 <!--  -->
 <template>
-    <div>
-        <router-view></router-view>
-    </div>
+    <div>首页</div>
 </template>
 
 <script>

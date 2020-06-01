@@ -1,20 +1,17 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
 
-Vue.use(VueRouter)
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component:() => import('../views/index.vue')
-  },
-]
+import mainRouter from './main.router'
 
-const router = new VueRouter({
-  mode: 'history',
+Vue.use(Router)
+
+const router = new Router({
   base: process.env.BASE_URL,
-  routes
+  routes: [
+    ...mainRouter
+  ]
 })
+
 
 export default router
