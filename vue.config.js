@@ -1,7 +1,8 @@
 const path = require('path')
 
 const resolve = dir => path.join(__dirname, dir)
-
+const autoprefixer = require("autoprefixer");
+const pxtorem = require("postcss-pxtorem");
 // const webpack = require('webpack')
 
 module.exports = {
@@ -28,7 +29,23 @@ module.exports = {
   //     })
   //   ]
   // },
-
+  // 配置css前缀,px转rem
+  css: {
+    loaderOptions: {
+      // 后处理器配置
+      postcss: {
+        plugins: [
+          // 配置样式前缀
+          autoprefixer(),
+          // 把px转为rem
+          pxtorem({
+            rootValue: 37.5,
+            propList: ["*"]
+          })
+        ]
+      }
+    }
+  },
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))

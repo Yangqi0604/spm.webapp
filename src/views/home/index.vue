@@ -2,6 +2,7 @@
 <template>
 	<div>
 		<van-button type="primary" @click="handleclick">主要按钮</van-button>
+		<div class="test"></div>
 	</div>
 </template>
 
@@ -38,4 +39,9 @@ export default {
 </script>
 <style scoped>
 /* @import url(); 引入css类 */
+.test{
+	width: 100px;
+	height: 100px;
+	background: pink;
+}
 </style>
