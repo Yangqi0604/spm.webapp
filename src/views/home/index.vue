@@ -2,7 +2,7 @@
 <template>
 	<div>
 		<van-button type="primary" @click="handleclick">主要按钮</van-button>
-		<div class="test"></div>
+		<div class="test">1</div>
 	</div>
 </template>
 
